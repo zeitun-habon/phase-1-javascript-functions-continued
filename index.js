@@ -7,6 +7,11 @@ function mondayWork(parameter='go to the office'){
     return `This Monday, I will ${parameter}.`
 }
 mondayWork(' work from home.')
-function wrapAdjective(){
-    
+function wrapAdjective(s){
+    return function (parameter="special"){
+          return `You are ${s}${parameter}${s}!`
+          
+    }
+
 }
+console.log(wrapAdjective("%")("a dedicated programmer"))
